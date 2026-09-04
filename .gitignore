@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Data (large files - download from Hugging Face instead)
+*.parquet
+processed/
+raw/
+
+# Models (large - regenerate from code)
+models/
+
+# Results (regenerate)
+results/
+report/
+audit/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+*.ipynb_checkpoints/
+
+# Kaggle
+kaggle.json
