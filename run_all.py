@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Master runner for Explainable Fake Review Detection for Bangla
-Executes all 6 weeks sequentially on Kaggle.
-"""
+"""Execute the six-stage Kaggle pipeline in order."""
 
 import subprocess
 import sys
@@ -17,63 +14,43 @@ NOTEBOOKS = [
     "06_final_evaluation.ipynb"
 ]
 
-def run_notebook(nb_path, timeout=3600):
-    """Execute a Jupyter notebook via nbconvert."""
+def run_notebook(nb_path: Path, output_dir: Path) -> None:
     cmd = [
         sys.executable, "-m", "nbconvert",
         "--execute", "--to", "notebook",
-        "--output", nb_path,
-        "--ExecutePreprocessor.timeout", str(timeout),
-        nb_path
+        "--output", nb_path.name,
+        "--output-dir", str(output_dir),
+        "--ExecutePreprocessor.timeout=-1",
+        str(nb_path),
     ]
-    print(f"\n{'='*60}")
-    print(f"Running: {nb_path}")
-    print(f"{'='*60}")
-    
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    
-    if result.returncode == 0:
-        print(f"✓ {nb_path} completed successfully")
-        return True
-    else:
-        print(f"✗ {nb_path} FAILED")
-        print(f"STDOUT:\n{result.stdout[-2000:]}")
-        print(f"STDERR:\n{result.stderr[-2000:]}")
-        return False
+    print(f"Running {nb_path.name}", flush=True)
+    subprocess.run(cmd, cwd=nb_path.parent, check=True)
 
 def main():
-    base_dir = Path(__file__).parent
-    
-    # Install requirements first
-    print("Installing requirements...")
-    subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"], 
-                   capture_output=True)
-    
-    # Run each notebook
-    failed = []
+    base_dir = Path(__file__).resolve().parent
+    output_dir = base_dir / "executed"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    if not Path("/kaggle/working").exists():
+        raise RuntimeError("This runner is configured for Kaggle only")
+
+    subprocess.run(
+        [sys.executable, "-m", "pip", "install", "-r", str(base_dir / "requirements.txt")],
+        cwd=base_dir,
+        check=True,
+    )
+
     for nb in NOTEBOOKS:
         nb_path = base_dir / nb
         if not nb_path.exists():
-            print(f"WARNING: {nb} not found, skipping")
-            continue
-            
-        success = run_notebook(str(nb_path))
-        if not success:
-            failed.append(nb)
-            print(f"Stopping pipeline due to failure in {nb}")
-            break
-    
-    print(f"\n{'='*60}")
-    print("PIPELINE SUMMARY")
-    print(f"{'='*60}")
-    if failed:
-        print(f"FAILED: {failed}")
-        sys.exit(1)
-    else:
-        print("ALL NOTEBOOKS COMPLETED SUCCESSFULLY!")
-        print(f"Results in: {base_dir / 'results'}")
-        print(f"Models in: {base_dir / 'models'}")
-        print(f"Reports in: {base_dir / 'report'}")
+            raise FileNotFoundError(nb_path)
+        run_notebook(nb_path, output_dir)
+
+    workspace = Path("/kaggle/working/bangla_fake_review")
+    print("Pipeline completed")
+    print(f"Results: {workspace / 'results'}")
+    print(f"Models: {workspace / 'models'}")
+    print(f"Report: {workspace / 'report'}")
 
 if __name__ == "__main__":
     main()
