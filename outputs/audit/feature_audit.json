@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-09-20T19:19:17.260419+00:00",
+  "fit_scope": "global unlabeled corpus: all BFRD splits plus BanglishRev; supervised models remain train-only",
+  "global_fit_rows": 331987,
+  "global_min_doc_frequency": 5.0,
+  "kaggle_safe_mode": true,
+  "count_vectorizer_vocabulary": 30000,
+  "word2vec_dimensions": 25,
+  "minhash": {
+    "token_shingle_size": 3,
+    "distance_threshold": 0.3,
+    "hash_tables": 3,
+    "hash_dimensions": 8192,
+    "banglish_near_duplicates_enabled": false
+  },
+  "feature_dimensions": {
+    "linear": 30026,
+    "tree": 51,
+    "naive_bayes": 30026
+  },
+  "handcrafted_features": [
+    "codemix_ratio",
+    "repeated_char_ratio",
+    "url_count",
+    "email_count",
+    "phone_count",
+    "price_count",
+    "hashtag_count",
+    "mention_count",
+    "exclamation_count",
+    "emoji_count",
+    "promo_keyword_hits",
+    "bengali_chars",
+    "latin_chars",
+    "digit_chars",
+    "other_chars",
+    "exact_dup_cluster_size",
+    "is_exact_duplicate",
+    "near_duplicate_degree",
+    "near_duplicate_similarity",
+    "near_duplicate_cluster_size",
+    "has_url",
+    "has_email",
+    "has_phone",
+    "has_price",
+    "has_promo",
+    "has_emoji"
+  ],
+  "near_duplicate_summary": [
+    {
+      "dataset": "train",
+      "rows": 6321,
+      "mean_degree": 0.09080841638981174,
+      "maximum_degree": 9.0,
+      "mean_similarity": 0.059432135355916293
+    },
+    {
+      "dataset": "validation",
+      "rows": 1356,
+      "mean_degree": 0.016224188790560472,
+      "maximum_degree": 2.0,
+      "mean_similarity": 0.012128289602623602
+    },
+    {
+      "dataset": "test",
+      "rows": 1356,
+      "mean_degree": 0.008849557522123894,
+      "maximum_degree": 1.0,
+      "mean_similarity": 0.007587008110919733
+    },
+    {
+      "dataset": "banglish",
+      "rows": 322954,
+      "mean_degree": 0.0,
+      "maximum_degree": 0.0,
+      "mean_similarity": 0.0
+    }
+  ]
+}

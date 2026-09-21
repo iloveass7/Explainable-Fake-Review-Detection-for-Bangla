@@ -6,12 +6,13 @@ import sys
 from pathlib import Path
 
 NOTEBOOKS = [
-    "01_data_acquisition_audit.ipynb",
-    "02_preprocessing_eda.ipynb", 
-    "03_feature_engineering.ipynb",
-    "04_gold_only_training.ipynb",
-    "05_pseudo_labeling.ipynb",
-    "06_final_evaluation.ipynb"
+    "01-data-acquisition-audit.ipynb",
+    "02-preprocessing-eda.ipynb", 
+    "03-feature-engineering.ipynb",
+    "04-gold-only-training.ipynb",
+    "05-pseudo-labeling.ipynb",
+    "06-final-evaluation.ipynb",
+    "07-decision-support-sql-pyspark.ipynb"
 ]
 
 def run_notebook(nb_path: Path, output_dir: Path) -> None:
@@ -40,10 +41,13 @@ def main():
         check=True,
     )
 
+    notebooks_dir = base_dir / "notebooks" if (base_dir / "notebooks").exists() else base_dir
     for nb in NOTEBOOKS:
-        nb_path = base_dir / nb
+        nb_path = notebooks_dir / nb
         if not nb_path.exists():
-            raise FileNotFoundError(nb_path)
+            nb_path = base_dir / nb
+        if not nb_path.exists():
+            raise FileNotFoundError(f"Notebook not found: {nb}")
         run_notebook(nb_path, output_dir)
 
     workspace = Path("/kaggle/working/bangla_fake_review")

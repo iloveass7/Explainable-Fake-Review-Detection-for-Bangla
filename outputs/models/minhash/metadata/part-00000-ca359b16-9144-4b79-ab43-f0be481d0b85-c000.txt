@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.MinHashLSHModel","timestamp":1789931846001,"sparkVersion":"4.0.2","uid":"MinHashLSH_3ab5948b496d","paramMap":{"inputCol":"shingle_vector","numHashTables":3,"outputCol":"minhash_signature"},"defaultParamMap":{"numHashTables":1,"outputCol":"MinHashLSH_3ab5948b496d__output"}}

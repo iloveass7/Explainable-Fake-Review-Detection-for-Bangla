@@ -1,0 +1,444 @@
+[{"stream_name":"stderr","time":7.593935749,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.593999966,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.594006584,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.594011231,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.18735039,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.187386638,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.187392475,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.187396688,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":12.145141957,"data":"WARNING: Using incubator modules: jdk.incubator.vector\n"}
+,{"stream_name":"stderr","time":12.348473896,"data":"WARNING: Using incubator modules: jdk.incubator.vector\n"}
+,{"stream_name":"stderr","time":12.348516914,"data":"\n"}
+,{"stream_name":"stderr","time":12.348521706,"data":"WARNING: Using incubator modules: jdk.incubator.vector\n"}
+,{"stream_name":"stderr","time":14.742020825,"data":"Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties\n"}
+,{"stream_name":"stderr","time":14.742581929,"data":"Setting default log level to \"WARN\".\n"}
+,{"stream_name":"stderr","time":14.742841095,"data":"To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n"}
+,{"stream_name":"stderr","time":14.956548426,"data":"Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties\n"}
+,{"stream_name":"stderr","time":14.956576314,"data":"Setting default log level to \"WARN\".\n"}
+,{"stream_name":"stderr","time":14.956582541,"data":"To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n"}
+,{"stream_name":"stderr","time":14.956587406,"data":"\n"}
+,{"stream_name":"stderr","time":14.956592127,"data":"Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties\n"}
+,{"stream_name":"stderr","time":14.956597725,"data":"Setting default log level to \"WARN\".\n"}
+,{"stream_name":"stderr","time":14.95660246,"data":"To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n"}
+,{"stream_name":"stderr","time":15.502402261,"data":"26/09/21 10:41:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\n"}
+,{"stream_name":"stderr","time":15.705386708,"data":"26/09/21 10:41:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\n"}
+,{"stream_name":"stderr","time":15.705420238,"data":"\n"}
+,{"stream_name":"stderr","time":15.705425866,"data":"26/09/21 10:41:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\n"}
+,{"stream_name":"stdout","time":21.323813959,"data":"PROCESSED_ARTIFACT_ROOT = /kaggle/input/notebooks/borshon47/featureengi/bangla_fake_review\n"}
+,{"stream_name":"stdout","time":21.323909616,"data":"RESULT_ARTIFACT_ROOT = /kaggle/input/notebooks/borshon47/evalu/bangla_fake_review\n"}
+,{"stream_name":"stdout","time":21.32392162,"data":"ALL_ARTIFACT_ROOTS =\n"}
+,{"stream_name":"stdout","time":21.323928454,"data":" - /kaggle/input/notebooks/borshon47/evalu/bangla_fake_review\n"}
+,{"stream_name":"stdout","time":21.323949096,"data":" - /kaggle/input/notebooks/borshon47/featureengi/bangla_fake_review\n"}
+,{"stream_name":"stdout","time":21.323953931,"data":" - /kaggle/input/notebooks/borshon47/preprocess1/bangla_fake_review\n"}
+,{"stream_name":"stdout","time":22.174659978,"data":"test_features.parquet -\u003e /kaggle/input/notebooks/borshon47/preprocess1/bangla_fake_review/processed/test_features.parquet\n"}
+,{"stream_name":"stderr","time":23.943047922,"data":"\r[Stage 0:\u003e                                                          (0 + 1) / 1]\r\r[Stage 0:\u003e                                                          (0 + 1) / 1]\r\n"}
+,{"stream_name":"stderr","time":24.184224314,"data":"\r[Stage 0:\u003e                                                          (0 + 1) / 1]\r\r                                                                                \r\r                                                                                \r\n"}
+,{"stream_name":"stdout","time":24.446651896,"data":"train_features.parquet -\u003e /kaggle/input/notebooks/borshon47/preprocess1/bangla_fake_review/processed/train_features.parquet\n"}
+,{"stream_name":"stdout","time":24.705483828,"data":"validation_features.parquet -\u003e /kaggle/input/notebooks/borshon47/preprocess1/bangla_fake_review/processed/validation_features.parquet\n"}
+,{"stream_name":"stdout","time":24.967289610999998,"data":"test_predictions_gold.parquet -\u003e /kaggle/input/notebooks/borshon47/evalu/bangla_fake_review/results/test_predictions_gold.parquet\n"}
+,{"stream_name":"stdout","time":25.239399492,"data":"test_predictions_expanded.parquet -\u003e /kaggle/input/notebooks/borshon47/evalu/bangla_fake_review/results/test_predictions_expanded.parquet\n"}
+,{"stream_name":"stdout","time":25.461407995,"data":"test_results_final.csv -\u003e /kaggle/input/notebooks/borshon47/evalu/bangla_fake_review/results/test_results_final.csv\n"}
+,{"stream_name":"stderr","time":27.319683276,"data":"\r                                                                                \r26/09/21 10:41:28 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.\n"}
+,{"stream_name":"stdout","time":27.374980787,"data":"gold_validation_metrics.csv not found; skipping validation-model comparison.\n"}
+,{"stream_name":"stderr","time":27.524075285,"data":"26/09/21 10:41:28 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.\n"}
+,{"stream_name":"stderr","time":27.52414219,"data":"\n"}
+,{"stream_name":"stderr","time":27.524461237,"data":"26/09/21 10:41:28 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.\n"}
+,{"stream_name":"stdout","time":28.421290592,"data":"test_features 1356\n"}
+,{"stream_name":"stdout","time":28.662438589,"data":"train_features 6321\n"}
+,{"stream_name":"stdout","time":28.869398508,"data":"validation_features 1356\n"}
+,{"stream_name":"stdout","time":29.07303948,"data":"test_metrics 2\n"}
+,{"stream_name":"stderr","time":29.738126976,"data":"\r[Stage 19:\u003e                                                         (0 + 4) / 4]\r\r[Stage 19:\u003e                                                         (0 + 4) / 4]\r\n"}
+,{"stream_name":"stdout","time":30.240645133,"data":"gold_validation_metrics 0\n"}
+,{"stream_name":"stderr","time":30.243946726,"data":"\r[Stage 19:\u003e                                                         (0 + 4) / 4]\r\r[Stage 19:===========================================\u003e              (3 + 1) / 4]\r\r                                                                                \r\r[Stage 19:===========================================\u003e              (3 + 1) / 4]\r\r                                                                                \r\n"}
+,{"stream_name":"stderr","time":30.67533244,"data":"\r[Stage 19:===========================================\u003e              (3 + 1) / 4]\r\r                                                                                \r26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.680734043,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.688514747,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.689532103,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.697745021,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.698388687,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.699008641,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.87996488,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.879993921,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880150091,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880159007,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880163151,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880167111,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880170901,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880174775,"data":"\n"}
+,{"stream_name":"stderr","time":30.880178286,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880391794,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880398276,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880402145,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880405954,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880411309,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":30.880415295,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.630888271,"data":"\r[Stage 22:\u003e   (0 + 4) / 4][Stage 23:\u003e   (0 + 0) / 4][Stage 24:\u003e   (0 + 0) / 4]\r26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.631479898,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.632112837,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.636597964,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.637021601,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.637476297,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.738896483,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743849514,"data":"\r[Stage 22:\u003e   (0 + 4) / 4][Stage 23:\u003e   (0 + 0) / 4][Stage 24:\u003e   (0 + 0) / 4]\r26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743893179,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743898565,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743902399,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743917524,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.74392159,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743925279,"data":"\n"}
+,{"stream_name":"stderr","time":31.74392877,"data":"\r[Stage 22:\u003e   (0 + 4) / 4][Stage 23:\u003e   (0 + 0) / 4][Stage 24:\u003e   (0 + 0) / 4]\r26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.74393391,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743937191,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743940356,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743944221,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.743949566,"data":"26/09/21 10:41:32 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.747110043,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.747163568,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.747169604,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.747173468,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.747461278,"data":"\r[Stage 24:\u003e                                                         (0 + 4) / 4]\r26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.879083183,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.879111958,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.879116807,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.879481766,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.880930174,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.881387906,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.917167105,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.917851485,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.91969435,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.919919034,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.92012813,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.920284164999998,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942664769,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942682887,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.94268772,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.94269203,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942695939,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942700018,"data":"\r[Stage 24:\u003e                                                         (0 + 4) / 4]\r26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942704689,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942708669,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942725801,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942729687,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942733925,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942738549,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942742403,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942746463,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942750296,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942754276,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942758074,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.94276247,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942767448,"data":"\n"}
+,{"stream_name":"stderr","time":31.942772731,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942776386,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942780096,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.94278376,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.94278777,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942792005,"data":"\r[Stage 24:\u003e                                                         (0 + 4) / 4]\r26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942796115,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942802933,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942806733,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942810484,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942814373,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942817874,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942821529,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942824836,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942828621,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942832132,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942835896,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":31.942839721,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.006101878,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.006407659,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.006657665,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.009547784,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.009711392,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.009840649,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.212848609,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.212915697,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213052384,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213059185,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.21306326,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213067258,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.21307117,"data":"\n"}
+,{"stream_name":"stderr","time":32.213075015,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213079083,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213082908,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213086792,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213090645,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.213094467,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.491073193,"data":"\r                                                                                \r26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.491112512,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.491823174,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.493406288,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.493847873,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.494425051,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549153837,"data":"\r                                                                                \r26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549193324,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549198421,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549202618,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549206729,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549210765,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549214743,"data":"\n"}
+,{"stream_name":"stderr","time":32.54960462,"data":"\r                                                                                \r26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549637055,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549642448,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549646793,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549650909,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.549655002,"data":"26/09/21 10:41:33 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stdout","time":32.604302561,"data":"+----------+-----+----+-----+\n"}
+,{"stream_name":"stdout","time":32.604336821,"data":"|     split|label|rows|  pct|\n"}
+,{"stream_name":"stdout","time":32.604341601,"data":"+----------+-----+----+-----+\n"}
+,{"stream_name":"stdout","time":32.604344971,"data":"|      test|    0| 201|14.82|\n"}
+,{"stream_name":"stdout","time":32.604348314,"data":"|      test|    1|1155|85.18|\n"}
+,{"stream_name":"stdout","time":32.604351896,"data":"|     train|    0| 934|14.78|\n"}
+,{"stream_name":"stdout","time":32.604354997,"data":"|     train|    1|5387|85.22|\n"}
+,{"stream_name":"stdout","time":32.604358168,"data":"|validation|    0| 201|14.82|\n"}
+,{"stream_name":"stdout","time":32.604376963,"data":"|validation|    1|1155|85.18|\n"}
+,{"stream_name":"stdout","time":32.604380538,"data":"+----------+-----+----+-----+\n"}
+,{"stream_name":"stdout","time":32.604383659,"data":"\n"}
+,{"stream_name":"stderr","time":32.690940009,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.696280185,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.696890933,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.704089192,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.704108729,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.7041161,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.783567918,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.78564436,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.787653099,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.789771177,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.790241135,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.791867521,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.823383145,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.823682318,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.824474144,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.829293178,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.829456951,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.829962496,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.852763168,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.853075498,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.853425056,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.854524396,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.854731912,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.854895336,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.881564107,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.882768999,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.883116521,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.883961204,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.884120704,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.884312185,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895554775,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895573729,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895578654,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895582776,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895788644,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895795325,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895799282,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895803216,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895806915,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895810752,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895814523,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895818322,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895823725,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.89582755,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.89583165,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.89583572,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895839647,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895843713,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895847645,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895851557,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895855607,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895859561,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895900496,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.89590894,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895913276,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895917582,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895921423,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895925971,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895930229,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895933732,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895937519,"data":"\n"}
+,{"stream_name":"stderr","time":32.895941347,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895945024,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895948657,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895952357,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895956248,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895959795,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895963377,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895968155,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895972127,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895980045,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895983918,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895987768,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895991561,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895995417,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.895999097,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.89600296,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.89600675,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896010675,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896014467,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896018885,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896022721,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896026636,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.89603047,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896034168,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896038164,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896042028,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896048364,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896052202,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896056012,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.896059734,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.90835809,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.908639526,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.911214469,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.911239945,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.911246011,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":32.911250553,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.111944712,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.111978238,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112002704,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112007025,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.11201089,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112014899,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112019136,"data":"\n"}
+,{"stream_name":"stderr","time":33.112662128,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112683769,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112688492,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112692408,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112696256,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stderr","time":33.112699987,"data":"26/09/21 10:41:34 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.\n"}
+,{"stream_name":"stdout","time":34.040118539,"data":"No gold validation metrics available; continuing with locked-test comparison.\n"}
+,{"stream_name":"stdout","time":34.260710124,"data":"+----------------+-------------+--------+--------+-----------+-----------+-------+\n"}
+,{"stream_name":"stdout","time":34.260743842,"data":"|condition       |model        |macro_f1|accuracy|fake_pr_auc|fake_recall|fake_f1|\n"}
+,{"stream_name":"stdout","time":34.2607484,"data":"+----------------+-------------+--------+--------+-----------+-----------+-------+\n"}
+,{"stream_name":"stdout","time":34.260752811,"data":"|gold_only       |random_forest|0.9194  |0.9617  |0.9213     |0.801      |0.861  |\n"}
+,{"stream_name":"stdout","time":34.260756314,"data":"|gold_plus_pseudo|random_forest|0.9098  |0.958   |0.9033     |0.7662     |0.8438 |\n"}
+,{"stream_name":"stdout","time":34.260759632,"data":"+----------------+-------------+--------+--------+-----------+-----------+-------+\n"}
+,{"stream_name":"stdout","time":34.260763335,"data":"\n"}
+,{"stream_name":"stdout","time":35.230095875,"data":"+----------------------------------------------------------------+-----+----------+----------------+-------------+\n"}
+,{"stream_name":"stdout","time":35.230159574,"data":"|review_id                                                       |label|prediction|fake_probability|review_queue |\n"}
+,{"stream_name":"stdout","time":35.230165753,"data":"+----------------------------------------------------------------+-----+----------+----------------+-------------+\n"}
+,{"stream_name":"stdout","time":35.230170495,"data":"|9ccbf03b6d1b06d9aeaea49d108c41cdf125a43e3c61dabb431bc478e66ab4bc|0    |0.0       |0.998           |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230175217,"data":"|61bcd85eff20d00587737757b55c75fe4cece41cdbc02dd34a0141edc4769b03|0    |0.0       |0.9973          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230179177,"data":"|889034036c40961d53fa2872df4bf9ef8b110cefe1f35e73e6ff670657488bb0|0    |0.0       |0.9972          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230183043,"data":"|b72f4451c206a46488d4b242f5b71c243c6315d93903247613c8c1cabe22b329|0    |0.0       |0.9971          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230186453,"data":"|3ed24f4cbc033a25879288ab1a4735da96c1c1d342829f3679ea3e41b3d20ba2|0    |0.0       |0.997           |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230190458,"data":"|ff558eb178ccf1f654bedb076dad315f816938a149b85a44a8e6342f6119811f|0    |0.0       |0.9964          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230194081,"data":"|72212889ded47807f3535e7552eb33e6bd95cf3d81c48f40317d93c695fd8e66|0    |0.0       |0.9944          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230233265,"data":"|02071e44874ce4cc89d27cb9f3b1d188e05d0b57c87c923d3f12e152c745ac82|0    |0.0       |0.994           |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230238231,"data":"|3ec5e968ec45502896d0a93bd04ff39cca81156aed59f5d499aba9168956c301|0    |0.0       |0.994           |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230242461,"data":"|95138b375b53a94681cba8c031051f22024b8297158a2aea4daa6d9189d13950|0    |0.0       |0.994           |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230246735,"data":"|ebe473436b6aa4cbbc1a9113a6b9aed3e62de59b496ca7ae6b0a18c27269683f|0    |0.0       |0.9939          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230250706,"data":"|1376027894e3cb4f8d76ab99fa4a3a738519a63d14a3d3a2f433ce346317a18d|0    |0.0       |0.9917          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230254511,"data":"|2064dfe658c9aefb0fe6a8741c23316929ed5df2d2989c9fad8d9b8df8c3b147|0    |0.0       |0.9907          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230258414,"data":"|8b95551d658b354f89e1e8538e57f4c2a086385a10bd27bce8a829accaccef2f|0    |0.0       |0.9907          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230264015,"data":"|2c0fdabf7bb9ba99e6783385f2fa1ff54bfd27b11d7569f037c2218adf13ef6d|0    |0.0       |0.9906          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230268213,"data":"|dca0f613a02b9811ec70d048aabbc46ff95e7334f4d37d5a5b5b33d7a030606d|0    |0.0       |0.9893          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230272163,"data":"|cd16d2db70d5065ba5a10aef24f3ed6b86832c35e1f130e2098fee2d635fa4a3|0    |0.0       |0.9892          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230276079,"data":"|ad29baa7e11bc7b92165f13fa643bbcad69b62966e4e84e1dcf98d3f6156cd49|0    |0.0       |0.9891          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.23028002,"data":"|636975c09e415366825fa9d5c210181f50b66df3064ff6156e9347af1b053f4f|0    |0.0       |0.9878          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.230284005,"data":"|26ddf068ed3de301ecc84f6e355b2c2c37cce58980194c27a1546543d14b8ef9|0    |0.0       |0.9878          |high_priority|\n"}
+,{"stream_name":"stdout","time":35.23028797,"data":"+----------------------------------------------------------------+-----+----------+----------------+-------------+\n"}
+,{"stream_name":"stdout","time":35.230292017,"data":"only showing top 20 rows\n"}
+,{"stream_name":"stdout","time":37.429532693,"data":"+--------------+----+----------+-----------+------------+---------------+--------------------------+\n"}
+,{"stream_name":"stdout","time":37.430499236,"data":"|error_type    |rows|mean_chars|mean_tokens|mean_codemix|mean_promo_hits|mean_near_duplicate_degree|\n"}
+,{"stream_name":"stdout","time":37.434946183,"data":"+--------------+----+----------+-----------+------------+---------------+--------------------------+\n"}
+,{"stream_name":"stdout","time":37.434961661,"data":"|correct       |1299|674.71    |101.51     |0.1442      |0.3788         |NULL                      |\n"}
+,{"stream_name":"stdout","time":37.43496619,"data":"|false_negative|47  |450.43    |69.02      |0.1327      |0.7234         |NULL                      |\n"}
+,{"stream_name":"stdout","time":37.434971123,"data":"|false_positive|10  |746.3     |118.6      |0.1773      |1.0            |NULL                      |\n"}
+,{"stream_name":"stdout","time":37.434975204,"data":"+--------------+----+----------+-----------+------------+---------------+--------------------------+\n"}
+,{"stream_name":"stdout","time":37.434979129,"data":"\n"}
+,{"stream_name":"stdout","time":38.617539199,"data":"+----+--------------------+-----------------------+--------------------------+-------------------------+\n"}
+,{"stream_name":"stdout","time":38.617625482,"data":"|rows|exact_duplicate_rows|mean_exact_cluster_size|mean_near_duplicate_degree|max_near_duplicate_degree|\n"}
+,{"stream_name":"stdout","time":38.617632298,"data":"+----+--------------------+-----------------------+--------------------------+-------------------------+\n"}
+,{"stream_name":"stdout","time":38.617636136,"data":"|1356|4                   |1.0029                 |NULL                      |NULL                     |\n"}
+,{"stream_name":"stdout","time":38.61764031,"data":"+----+--------------------+-----------------------+--------------------------+-------------------------+\n"}
+,{"stream_name":"stdout","time":38.617644186,"data":"\n"}
+,{"stream_name":"stdout","time":39.986105171,"data":"+------------------+----------+---------------+---------+\n"}
+,{"stream_name":"stdout","time":39.986135178,"data":"|feature           |train_mean|validation_mean|test_mean|\n"}
+,{"stream_name":"stdout","time":39.986140055999996,"data":"+------------------+----------+---------------+---------+\n"}
+,{"stream_name":"stdout","time":39.986143849,"data":"|char_length       |659.1758  |654.9963       |667.4668 |\n"}
+,{"stream_name":"stdout","time":39.986147389,"data":"|token_count       |99.037    |98.4292        |100.514  |\n"}
+,{"stream_name":"stdout","time":39.986150703,"data":"|codemix_ratio     |0.1432    |0.1469         |0.1441   |\n"}
+,{"stream_name":"stdout","time":39.986154105,"data":"|promo_keyword_hits|0.427     |0.4395         |0.3953   |\n"}
+,{"stream_name":"stdout","time":39.986157446,"data":"|emoji_count       |1.171     |1.2721         |1.0929   |\n"}
+,{"stream_name":"stdout","time":39.986161078,"data":"|has_promo         |0.3205    |0.3311         |0.2994   |\n"}
+,{"stream_name":"stdout","time":39.986164668,"data":"+------------------+----------+---------------+---------+\n"}
+,{"stream_name":"stdout","time":39.98616833,"data":"\n"}
+,{"stream_name":"stderr","time":40.434131288,"data":"26/09/21 10:41:41 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/blockmgr-1bd08f7a-5fe2-4755-9fc8-b1ac3a35b3b5. Falling back to Java IO way\n"}
+,{"stream_name":"stderr","time":40.43417724,"data":"java.io.IOException: Failed to delete: /tmp/blockmgr-1bd08f7a-5fe2-4755-9fc8-b1ac3a35b3b5\n"}
+,{"stream_name":"stderr","time":40.434183066,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:199)\n"}
+,{"stream_name":"stderr","time":40.434188092,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:116)\n"}
+,{"stream_name":"stderr","time":40.434202827,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:94)\n"}
+,{"stream_name":"stderr","time":40.434206405,"data":"\tat org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)\n"}
+,{"stream_name":"stderr","time":40.434210107,"data":"\tat org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)\n"}
+,{"stream_name":"stderr","time":40.434218172,"data":"\tat org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1048)\n"}
+,{"stream_name":"stderr","time":40.434222359,"data":"\tat org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1(DiskBlockManager.scala:372)\n"}
+,{"stream_name":"stderr","time":40.434226984,"data":"\tat org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1$adapted(DiskBlockManager.scala:368)\n"}
+,{"stream_name":"stderr","time":40.434668666,"data":"\tat scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1324)\n"}
+,{"stream_name":"stderr","time":40.434700122,"data":"\tat org.apache.spark.storage.DiskBlockManager.doStop(DiskBlockManager.scala:368)\n"}
+,{"stream_name":"stderr","time":40.434705001,"data":"\tat org.apache.spark.storage.DiskBlockManager.stop(DiskBlockManager.scala:363)\n"}
+,{"stream_name":"stderr","time":40.434709855,"data":"\tat org.apache.spark.storage.BlockManager.stop(BlockManager.scala:2166)\n"}
+,{"stream_name":"stderr","time":40.434713625,"data":"\tat org.apache.spark.SparkEnv.stop(SparkEnv.scala:118)\n"}
+,{"stream_name":"stderr","time":40.434717,"data":"\tat org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2395)\n"}
+,{"stream_name":"stderr","time":40.434720386,"data":"\tat org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1300)\n"}
+,{"stream_name":"stderr","time":40.434723775,"data":"\tat org.apache.spark.SparkContext.stop(SparkContext.scala:2395)\n"}
+,{"stream_name":"stderr","time":40.434727005,"data":"\tat org.apache.spark.SparkContext.stop(SparkContext.scala:2297)\n"}
+,{"stream_name":"stderr","time":40.434730577,"data":"\tat org.apache.spark.SparkContext.$anonfun$new$36(SparkContext.scala:704)\n"}
+,{"stream_name":"stderr","time":40.434733825,"data":"\tat org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:231)\n"}
+,{"stream_name":"stderr","time":40.434737435,"data":"\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:205)\n"}
+,{"stream_name":"stderr","time":40.434740869,"data":"\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\n"}
+,{"stream_name":"stderr","time":40.434744236,"data":"\tat org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1937)\n"}
+,{"stream_name":"stderr","time":40.435450413,"data":"\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:205)\n"}
+,{"stream_name":"stderr","time":40.435470964,"data":"\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\n"}
+,{"stream_name":"stderr","time":40.43547541,"data":"\tat scala.util.Try$.apply(Try.scala:217)\n"}
+,{"stream_name":"stderr","time":40.435478896,"data":"\tat org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:205)\n"}
+,{"stream_name":"stderr","time":40.435482561,"data":"\tat org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:184)\n"}
+,{"stream_name":"stderr","time":40.43548606,"data":"\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)\n"}
+,{"stream_name":"stderr","time":40.435489679,"data":"\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n"}
+,{"stream_name":"stderr","time":40.435493235,"data":"\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n"}
+,{"stream_name":"stderr","time":40.435496658,"data":"\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n"}
+,{"stream_name":"stderr","time":40.435500663,"data":"\tat java.base/java.lang.Thread.run(Thread.java:840)\n"}
+,{"stream_name":"stderr","time":40.534156306,"data":"26/09/21 10:41:41 WARN JavaUtils: Attempt to delete using native Unix OS command failed for path = /tmp/blockmgr-1bd08f7a-5fe2-4755-9fc8-b1ac3a35b3b5/35. Falling back to Java IO way\n"}
+,{"stream_name":"stderr","time":40.534200498,"data":"java.io.IOException: Failed to delete: /tmp/blockmgr-1bd08f7a-5fe2-4755-9fc8-b1ac3a35b3b5/35\n"}
+,{"stream_name":"stderr","time":40.534206602,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingUnixNative(JavaUtils.java:199)\n"}
+,{"stream_name":"stderr","time":40.534211768,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:116)\n"}
+,{"stream_name":"stderr","time":40.534230936,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursivelyUsingJavaIO(JavaUtils.java:138)\n"}
+,{"stream_name":"stderr","time":40.534237279,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:124)\n"}
+,{"stream_name":"stderr","time":40.534242744,"data":"\tat org.apache.spark.network.util.JavaUtils.deleteRecursively(JavaUtils.java:94)\n"}
+,{"stream_name":"stderr","time":40.534248274,"data":"\tat org.apache.spark.util.SparkFileUtils.deleteRecursively(SparkFileUtils.scala:121)\n"}
+,{"stream_name":"stderr","time":40.534254042,"data":"\tat org.apache.spark.util.SparkFileUtils.deleteRecursively$(SparkFileUtils.scala:120)\n"}
+,{"stream_name":"stderr","time":40.53425975,"data":"\tat org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:1048)\n"}
+,{"stream_name":"stderr","time":40.534265572,"data":"\tat org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1(DiskBlockManager.scala:372)\n"}
+,{"stream_name":"stderr","time":40.534271262,"data":"\tat org.apache.spark.storage.DiskBlockManager.$anonfun$doStop$1$adapted(DiskBlockManager.scala:368)\n"}
+,{"stream_name":"stderr","time":40.534276883,"data":"\tat scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1324)\n"}
+,{"stream_name":"stderr","time":40.534282238,"data":"\tat org.apache.spark.storage.DiskBlockManager.doStop(DiskBlockManager.scala:368)\n"}
+,{"stream_name":"stderr","time":40.534287557,"data":"\tat org.apache.spark.storage.DiskBlockManager.stop(DiskBlockManager.scala:363)\n"}
+,{"stream_name":"stderr","time":40.534292986,"data":"\tat org.apache.spark.storage.BlockManager.stop(BlockManager.scala:2166)\n"}
+,{"stream_name":"stderr","time":40.534298428,"data":"\tat org.apache.spark.SparkEnv.stop(SparkEnv.scala:118)\n"}
+,{"stream_name":"stderr","time":40.534304044,"data":"\tat org.apache.spark.SparkContext.$anonfun$stop$25(SparkContext.scala:2395)\n"}
+,{"stream_name":"stderr","time":40.534309237,"data":"\tat org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1300)\n"}
+,{"stream_name":"stderr","time":40.534315035,"data":"\tat org.apache.spark.SparkContext.stop(SparkContext.scala:2395)\n"}
+,{"stream_name":"stderr","time":40.534320571,"data":"\tat org.apache.spark.SparkContext.stop(SparkContext.scala:2297)\n"}
+,{"stream_name":"stderr","time":40.534326008,"data":"\tat org.apache.spark.SparkContext.$anonfun$new$36(SparkContext.scala:704)\n"}
+,{"stream_name":"stderr","time":40.534331406,"data":"\tat org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:231)\n"}
+,{"stream_name":"stderr","time":40.534405571,"data":"\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:205)\n"}
+,{"stream_name":"stderr","time":40.534935674,"data":"\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\n"}
+,{"stream_name":"stderr","time":40.534941886,"data":"\tat org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1937)\n"}
+,{"stream_name":"stderr","time":40.534946483,"data":"\tat org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:205)\n"}
+,{"stream_name":"stderr","time":40.53495069,"data":"\tat scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)\n"}
+,{"stream_name":"stderr","time":40.534955127,"data":"\tat scala.util.Try$.apply(Try.scala:217)\n"}
+,{"stream_name":"stderr","time":40.53495873,"data":"\tat org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:205)\n"}
+,{"stream_name":"stderr","time":40.534972808,"data":"\tat org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:184)\n"}
+,{"stream_name":"stderr","time":40.53497693,"data":"\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)\n"}
+,{"stream_name":"stderr","time":40.534981225,"data":"\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n"}
+,{"stream_name":"stderr","time":40.534985394,"data":"\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n"}
+,{"stream_name":"stderr","time":40.534989902,"data":"\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n"}
+,{"stream_name":"stderr","time":40.534994795,"data":"\tat java.base/java.lang.Thread.run(Thread.java:840)\n"}
+,{"stream_name":"stderr","time":45.131965412,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":45.132007864,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":45.288448144,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":45.288500614,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":45.890191148,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":46.19996083,"data":"[NbConvertApp] Writing 48567 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":48.549897801,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":49.442700555,"data":"[NbConvertApp] Writing 356821 bytes to __results__.html\n"}
+]

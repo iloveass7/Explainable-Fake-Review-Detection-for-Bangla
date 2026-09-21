@@ -1,0 +1,7 @@
+feature,train_mean,validation_mean,test_mean
+char_length,659.1758,654.9963,667.4668
+token_count,99.037,98.4292,100.514
+codemix_ratio,0.1432,0.1469,0.1441
+promo_keyword_hits,0.427,0.4395,0.3953
+emoji_count,1.171,1.2721,1.0929
+has_promo,0.3205,0.3311,0.2994

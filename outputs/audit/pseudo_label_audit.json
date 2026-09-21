@@ -1,0 +1,200 @@
+{
+  "created_at": "2026-09-20T22:24:49.239252+00:00",
+  "confidence_rule": "strictly greater than threshold",
+  "primary": {
+    "fake_threshold": 0.9,
+    "genuine_threshold": 0.75,
+    "accepted_before_cap": 304667,
+    "class_counts_before_cap": {
+      "1": 249090,
+      "0": 55577
+    },
+    "class_limits": {
+      "1": 25284,
+      "0": 6321
+    },
+    "accepted_after_cap": 31605,
+    "class_counts_after_cap": {
+      "1": 25284,
+      "0": 6321
+    },
+    "gold_rows": 6321
+  },
+  "sensitivity": {
+    "fake_threshold": 0.95,
+    "genuine_threshold": 0.7,
+    "accepted_before_cap": 310553,
+    "class_counts_before_cap": {
+      "1": 255376,
+      "0": 55177
+    },
+    "class_limits": {
+      "1": 25284,
+      "0": 6321
+    },
+    "accepted_after_cap": 31605,
+    "class_counts_after_cap": {
+      "1": 25284,
+      "0": 6321
+    },
+    "gold_rows": 6321
+  },
+  "pseudo_source_weight": 0.5,
+  "class_weights_from_gold": {
+    "1": 0.5866901800631149,
+    "0": 3.383832976445396
+  },
+  "validation_comparison": [
+    {
+      "model": "logistic_regression",
+      "gold_macro_f1": 0.9093821143282292,
+      "expanded_macro_f1": 0.9077814501979027,
+      "delta_macro_f1": -0.0016006641303265567,
+      "gold_fake_pr_auc": 0.8898829520591188,
+      "expanded_fake_pr_auc": 0.8843068166855373,
+      "delta_fake_pr_auc": -0.005576135373581481,
+      "gold_fake_f1": 0.844559585492228,
+      "expanded_fake_f1": 0.8412698412698413
+    },
+    {
+      "model": "naive_bayes",
+      "gold_macro_f1": 0.7138895957300955,
+      "expanded_macro_f1": 0.7501340123291342,
+      "delta_macro_f1": 0.036244416599038765,
+      "gold_fake_pr_auc": 0.539671533131799,
+      "expanded_fake_pr_auc": 0.5591508867529469,
+      "delta_fake_pr_auc": 0.019479353621147832,
+      "gold_fake_f1": 0.533066132264529,
+      "expanded_fake_f1": 0.5769230769230769
+    },
+    {
+      "model": "linear_svc",
+      "gold_macro_f1": 0.7758301748136565,
+      "expanded_macro_f1": 0.8786210233458329,
+      "delta_macro_f1": 0.10279084853217646,
+      "gold_fake_pr_auc": 0.6676696741528871,
+      "expanded_fake_pr_auc": 0.8590344671297844,
+      "delta_fake_pr_auc": 0.19136479297689724,
+      "gold_fake_f1": 0.6096866096866097,
+      "expanded_fake_f1": 0.7885714285714286
+    },
+    {
+      "model": "random_forest",
+      "gold_macro_f1": 0.9252274607113317,
+      "expanded_macro_f1": 0.9224378542120224,
+      "delta_macro_f1": -0.0027896064993092606,
+      "gold_fake_pr_auc": 0.9235031891926411,
+      "expanded_fake_pr_auc": 0.9025118373565356,
+      "delta_fake_pr_auc": -0.020991351836105454,
+      "gold_fake_f1": 0.8709677419354839,
+      "expanded_fake_f1": 0.8657534246575342
+    },
+    {
+      "model": "gbt",
+      "gold_macro_f1": 0.9074339545361458,
+      "expanded_macro_f1": 0.9041674948651692,
+      "delta_macro_f1": -0.003266459670976607,
+      "gold_fake_pr_auc": 0.9173206774690118,
+      "expanded_fake_pr_auc": 0.8984398887059314,
+      "delta_fake_pr_auc": -0.018880788763080414,
+      "gold_fake_f1": 0.8421052631578947,
+      "expanded_fake_f1": 0.8358974358974359
+    },
+    {
+      "model": "decision_tree",
+      "gold_macro_f1": 0.8649694470289435,
+      "expanded_macro_f1": 0.8689669833823443,
+      "delta_macro_f1": 0.003997536353400832,
+      "gold_fake_pr_auc": 0.8615504073724387,
+      "expanded_fake_pr_auc": 0.8629806305041512,
+      "delta_fake_pr_auc": 0.0014302231317124825,
+      "gold_fake_f1": 0.7734553775743707,
+      "expanded_fake_f1": 0.7795823665893271
+    },
+    {
+      "model": "factorization_machine",
+      "gold_macro_f1": 0.667334189131365,
+      "expanded_macro_f1": 0.6596539076786414,
+      "delta_macro_f1": -0.007680281452723592,
+      "gold_fake_pr_auc": 0.3454695194991466,
+      "expanded_fake_pr_auc": 0.36090189485325647,
+      "delta_fake_pr_auc": 0.01543237535410985,
+      "gold_fake_f1": 0.4266666666666667,
+      "expanded_fake_f1": 0.41192411924119243
+    }
+  ],
+  "feature_ablation": [
+    {
+      "condition": "gold",
+      "feature_set": "full",
+      "macro_f1": 0.9093821143282292,
+      "fake_pr_auc": 0.8898829520591188,
+      "fake_f1": 0.844559585492228
+    },
+    {
+      "condition": "gold",
+      "feature_set": "tfidf_only",
+      "macro_f1": 0.7383273756466924,
+      "fake_pr_auc": 0.5919066774506164,
+      "fake_f1": 0.5594405594405595
+    },
+    {
+      "condition": "gold",
+      "feature_set": "without_near_duplicate",
+      "macro_f1": 0.9106993565094124,
+      "fake_pr_auc": 0.8900600047909655,
+      "fake_f1": 0.8467532467532467
+    },
+    {
+      "condition": "expanded",
+      "feature_set": "full",
+      "macro_f1": 0.9077814501979027,
+      "fake_pr_auc": 0.8843068166855373,
+      "fake_f1": 0.8412698412698413
+    },
+    {
+      "condition": "expanded",
+      "feature_set": "tfidf_only",
+      "macro_f1": 0.7240441245534146,
+      "fake_pr_auc": 0.59380785118099,
+      "fake_f1": 0.5551330798479087
+    },
+    {
+      "condition": "expanded",
+      "feature_set": "without_near_duplicate",
+      "macro_f1": 0.9077814501979027,
+      "fake_pr_auc": 0.8842703823855879,
+      "fake_f1": 0.8412698412698413
+    }
+  ],
+  "sensitivity_result": {
+    "model": "logistic_regression_threshold_095",
+    "macro_f1": 0.9077814501979027,
+    "macro_precision": 0.9313408375382758,
+    "macro_recall": 0.8877301802674937,
+    "accuracy": 0.9557522123893806,
+    "fake_pr_auc": 0.8851437343804532,
+    "fake_roc_auc": 0.9394327065968857,
+    "fake_f1": 0.8412698412698413,
+    "genuine_f1": 0.974293059125964,
+    "confusion_matrix": [
+      [
+        159,
+        42
+      ],
+      [
+        18,
+        1137
+      ]
+    ]
+  },
+  "final_selection": {
+    "selected_model": "random_forest",
+    "selected_model_type": "random_forest",
+    "selection_source": "gold validation split",
+    "gold_model_path": "models/random_forest_gold",
+    "expanded_model_path": "models/random_forest_expanded",
+    "primary_metric": "expanded_macro_f1",
+    "tie_break_metric": "expanded_fake_pr_auc"
+  }
+}

@@ -88,8 +88,8 @@ Drag all files from this repo into the Kaggle notebook sidebar.
 ### 3. Run
 ```python
 # Option A: Individual notebooks (recommended)
-# Open 01_data_acquisition_audit.ipynb → Run all cells
-# Then 02_preprocessing_eda.ipynb, etc.
+# Open notebooks/01-data-acquisition-audit.ipynb → Run all cells
+# Then notebooks/02-preprocessing-eda.ipynb, etc.
 
 # Option B: Full pipeline
 %run run_all.py
@@ -110,26 +110,29 @@ pip install -r requirements.txt
 # BASE_DIR = Path("/path/to/local/dir")  # Instead of /kaggle/working/...
 
 # Run notebooks sequentially
-jupyter notebook 01_data_acquisition_audit.ipynb
+jupyter notebook notebooks/01-data-acquisition-audit.ipynb
 ```
 
-**Colab**: Requires Java 11 + Spark setup. See `KAGGLE_SETUP.md` for details.
+**Colab**: Requires Java 11 + Spark setup. See [`docs/KAGGLE_SETUP.md`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/docs/KAGGLE_SETUP.md) for details.
 
 ---
 
 ## Key Outputs
 
-| Artifact | Location |
-|----------|----------|
-| Final test metrics | `results/test_results_final.csv` |
-| Best model (expanded) | `models/final_model/` |
-| Best model (gold-only) | `models/final_model_gold_only/` |
-| Comparison plots | `report/test_comparison.png`, `report/confusion_matrices.png` |
-| Error analysis | `report/error_analysis.png` |
-| LR coefficients | `report/lr_coefficients_comparison.csv` |
-| Tree feature importance | `report/rf_feature_importance_test.csv`, `report/gbt_feature_importance_test.csv` |
-| LIME explanations | `report/lime_explanations.json` |
-| Executive summary | `report/final_summary.json` |
+| Artifact | Location | Description |
+|----------|----------|-------------|
+| Final Test Metrics | [`outputs/results/test_results_final.csv`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/results/test_results_final.csv) | Final locked-test evaluation metrics across all models |
+| Validation Metrics | [`outputs/results/gold_validation_metrics.csv`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/results/gold_validation_metrics.csv) | 3-fold cross-validation metrics on gold set |
+| Pseudo-Label Ablation | [`outputs/results/feature_ablation_validation.csv`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/results/feature_ablation_validation.csv) | Feature ablation and gold vs expanded comparison |
+| Comparison Plots | [`outputs/report/test_comparison.png`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/test_comparison.png), [`outputs/report/confusion_matrices.png`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/confusion_matrices.png) | Model performance & confusion matrix visual comparison |
+| Error Analysis | [`outputs/report/error_analysis.png`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/error_analysis.png), [`outputs/report/error_analysis.csv`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/error_analysis.csv) | False positive and false negative error breakdowns |
+| LR Coefficients | [`outputs/report/logistic_coefficients.csv`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/logistic_coefficients.csv) | Global linear model feature weights |
+| Feature Importance | [`outputs/report/random_forest_feature_importance.csv`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/random_forest_feature_importance.csv), [`outputs/report/gbt_feature_importance.csv`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/gbt_feature_importance.csv) | Tree-based model importance rankings |
+| Local Explanations | [`outputs/report/lime_explanations.json`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/report/lime_explanations.json) | LIME sample-level explanations |
+| Decision Support Tables | [`outputs/decision_support/`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/decision_support) | PySpark SQL decision tables (balance, drift, review queues) |
+| Trained ML Models | [`outputs/models/`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/models) | Serialized Spark ML pipelines and models (~11.5 MB) |
+| Execution Logs | [`outputs/logs/`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/outputs/logs) | Full stdout/stderr logs from the Kaggle run |
+| IEEE Paper PDF | [`report/bangla_fake_review_ieee.pdf`](file:///d:/Explainable%20Fake%20Review%20Detection%20for%20Bangla/report/bangla_fake_review_ieee.pdf) | Compiled IEEE conference paper |
 
 ---
 
@@ -156,21 +159,46 @@ jupyter notebook 01_data_acquisition_audit.ipynb
 |-------|--------|
 | Global (Linear) | LR coefficients mapped to vocabulary + engineered features |
 | Global (Tree) | RF/GBT feature importance |
-| Local | LIME on ~15 test predictions (correct + incorrect) |
+| Local | LIME on ~110 test predictions (correct + incorrect) |
 
 ---
 
-## Expected Results (from Proposal)
+## Experimental Results
 
-| Model | Gold Macro-F1 | Gold+Pseudo Macro-F1 | Δ |
-|-------|--------------|---------------------|---|
-| Logistic Regression | ~0.75 | ~0.77 | +0.02 |
-| Naive Bayes | ~0.70 | ~0.71 | +0.01 |
-| Linear SVC | ~0.76 | ~0.78 | +0.02 |
-| Random Forest | ~0.78 | ~0.79 | +0.01 |
-| GBT | ~0.79 | ~0.80 | +0.01 |
+All experiments were executed on Kaggle (PySpark 3.5.x environment). Test evaluation was conducted exactly once on the locked held-out test split (1,356 reviews: 201 fake, 1,155 genuine).
 
-*Actual results vary. Pseudo-labeling improvement is an experimental finding, not guaranteed.*
+### 1. Locked Held-Out Test Evaluation
+
+| Model / Condition | Macro-F1 | Accuracy | Fake PR-AUC | Fake ROC-AUC | Fake Precision | Fake Recall | Fake F1 | Genuine F1 | Confusion Matrix (F:G) |
+|---|---|---|---|---|---|---|---|---|---|
+| **Random Forest (Gold Only)** | **0.9194** | **0.9617** | **0.9213** | **0.9643** | 0.9306 | **0.8010** | **0.8610** | **0.9778** | [[161, 40], [12, 1143]] |
+| **Random Forest (Gold + Pseudo)** | 0.9098 | 0.9580 | 0.9033 | 0.9572 | **0.9390** | 0.7662 | 0.8438 | 0.9757 | [[154, 47], [10, 1145]] |
+
+> **Key Finding**: The Gold-Only Random Forest model achieves the highest overall test performance (**0.9194 Macro-F1**, **0.9617 Accuracy**, **0.9213 PR-AUC**). Pseudo-labeling from unconstrained e-commerce reviews showed slight degradation ($\Delta\text{Macro-F1} = -0.0096$), indicating that clean, verified gold labels remain superior to open-domain pseudo-annotations.
+
+### 2. Validation Benchmark Across All Models (3-Fold CV on Gold)
+
+| Model Family | Validation Macro-F1 | Accuracy | Fake PR-AUC | Fake F1 | Genuine F1 |
+|---|---|---|---|---|---|
+| **Random Forest** | **0.9252** | **0.9646** | **0.9235** | **0.8710** | **0.9795** |
+| **Logistic Regression** | 0.9094 | 0.9558 | 0.8899 | 0.8446 | 0.9742 |
+| **Gradient Boosted Trees (GBT)** | 0.9074 | 0.9535 | 0.9173 | 0.8421 | 0.9728 |
+| **Decision Tree** | 0.8650 | 0.9270 | 0.8616 | 0.7735 | 0.9565 |
+| **Linear SVC** | 0.7758 | 0.8990 | 0.6677 | 0.6097 | 0.9420 |
+| **Naive Bayes** | 0.7139 | 0.8282 | 0.5397 | 0.5331 | 0.8947 |
+| **Factorization Machine** | 0.6673 | 0.8414 | 0.3455 | 0.4267 | 0.9080 |
+
+### 3. Feature Ablation Study
+
+| Configuration | Feature Set | Macro-F1 | Fake PR-AUC | Fake F1 | Impact |
+|---|---|---|---|---|---|
+| Gold Training | **Full Multi-Signal Fusion** | **0.9094** | **0.8899** | **0.8446** | Baseline |
+| Gold Training | **TF-IDF Only** | 0.7383 | 0.5919 | 0.5594 | **-0.1711 Macro-F1 (-17.1%)** |
+| Gold Training | **Without Near-Duplicate** | 0.9107 | 0.8901 | 0.8468 | Comparable / within noise margin |
+| Expanded Training | Full Multi-Signal Fusion | 0.9078 | 0.8843 | 0.8413 | Baseline |
+| Expanded Training | TF-IDF Only | 0.7240 | 0.5938 | 0.5551 | **-0.1837 Macro-F1 (-18.4%)** |
+
+> **Takeaway**: Relying solely on bag-of-words / TF-IDF drops detection Macro-F1 by over **17%**. Handcrafted stylometrics, promotional markers, and dense embeddings are critical for robust Bangla fake review detection.
 
 ---
 
@@ -178,17 +206,35 @@ jupyter notebook 01_data_acquisition_audit.ipynb
 
 ```
 .
-├── 01_data_acquisition_audit.ipynb    # Week 1
-├── 02_preprocessing_eda.ipynb         # Week 2
-├── 03_feature_engineering.ipynb       # Week 3
-├── 04_gold_only_training.ipynb        # Week 4
-├── 05_pseudo_labeling.ipynb           # Week 5
-├── 06_final_evaluation.ipynb          # Week 6
-├── run_all.py                         # Master runner
-├── requirements.txt                   # Dependencies
-├── KAGGLE_SETUP.md                    # Kaggle guide
-├── G3Gr4.pdf                          # Original proposal
-└── .gitignore
+├── notebooks/                              # Final executed Jupyter notebooks with Kaggle outputs
+│   ├── 01-data-acquisition-audit.ipynb     # Stage 1: Data acquisition, audit, leakage-safe splits
+│   ├── 02-preprocessing-eda.ipynb          # Stage 2: Bangla tokenization, handcrafted signals, EDA
+│   ├── 03-feature-engineering.ipynb        # Stage 3: TF-IDF, Word2Vec, MinHash LSH feature matrices
+│   ├── 04-gold-only-training.ipynb         # Stage 4: 5 classical models with 3-fold cross-validation
+│   ├── 05-pseudo-labeling.ipynb            # Stage 5: Confidence pseudo-labeling & controlled ablation
+│   ├── 06-final-evaluation.ipynb           # Stage 6: Locked test set evaluation & explainability (LIME)
+│   └── 07-decision-support-sql-pyspark.ipynb # Stage 7: PySpark SQL decision-support evidence
+├── outputs/                                # Clean experimental results and artifacts
+│   ├── audit/                              # Data provenance, leakage audits, split balances
+│   ├── decision_support/                   # Spark SQL analytical decision tables
+│   ├── eda/                                # Exploratory data analysis distribution plots
+│   ├── logs/                               # Execution logs from Kaggle runs
+│   ├── models/                             # Saved PySpark ML models and pipelines (~11.5 MB)
+│   ├── report/                             # Confusion matrices, error analyses, LIME explanations
+│   └── results/                            # Test metrics, validation results, and prediction tables
+├── report/                                 # IEEE Conference Paper
+│   ├── bangla_fake_review_ieee.tex         # Complete LaTeX paper source
+│   ├── bangla_fake_review_ieee.pdf         # Compiled camera-ready IEEE paper PDF
+│   ├── IEEEtran.cls                        # IEEE conference LaTeX class file
+│   └── report_assets/                      # Figures, charts, and pipeline methodology diagrams
+├── docs/                                   # Extended documentation and project specifications
+│   ├── PROJECT_REPORT.md                   # Full IEEE-style project report & findings
+│   ├── DATA_ANALYTICS_DECISIONS.md         # Operational data analytics decision guide
+│   ├── KAGGLE_SETUP.md                     # Kaggle execution and setup instructions
+│   └── G3Gr4.pdf                           # Course project specification guideline PDF
+├── requirements.txt                        # Python dependencies
+├── run_all.py                              # Master automated pipeline runner
+└── README.md
 ```
 
 ---

@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-09-21T06:01:59.750239+00:00",
+  "selection_source": "gold validation split",
+  "locked_test_evaluations": [
+    "gold_only",
+    "gold_plus_pseudo"
+  ],
+  "reported_metrics": [
+    "macro_f1",
+    "fake_pr_auc",
+    "macro_precision",
+    "macro_recall",
+    "accuracy",
+    "fake_roc_auc",
+    "classwise_precision_recall_f1"
+  ],
+  "lime_cases": 110
+}

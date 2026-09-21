@@ -1,0 +1,3 @@
+threshold,accepted,empirical_accuracy,predicted_fake,predicted_genuine
+0.9,911,0.9901207464324918,151,760
+0.95,472,0.9957627118644068,128,344

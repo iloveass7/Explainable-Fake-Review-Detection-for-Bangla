@@ -1,0 +1,31 @@
+\begin{tikzpicture}[font=\scriptsize, node distance=5mm and 7mm,
+  box/.style={draw=black!70, rounded corners=2pt, align=center, minimum height=8mm, text width=27mm, fill=blue!6},
+  input/.style={box, fill=cyan!10}, feat/.style={box, fill=green!10}, model/.style={box, fill=orange!12}, outputbox/.style={box, fill=red!8},
+  arr/.style={-latex, thick, black!70}]
+\node[input] (bfrd) {Gold BFRD\\9,049 raw reviews};
+\node[input, below=of bfrd] (bang) {BanglishRev\\1,746,943 scanned};
+\node[box, right=of bfrd, yshift=-8mm, text width=31mm] (audit) {Schema audit, normalization, redaction, invalid-row removal};
+\draw[arr] (bfrd.east) -- (audit.west); \draw[arr] (bang.east) -| (audit.south);
+\node[box, right=of audit, text width=31mm, fill=yellow!14] (dup) {Exact hashes + MinHash LSH\\3-token shingles, distance 0.30};
+\draw[arr] (audit.east) -- (dup.west);
+\node[box, below=of dup, text width=42mm, fill=violet!10] (split) {Duplicate-aware stratified split\\Train 6,321; validation 1,356; locked test 1,356};
+\draw[arr] (dup.south) -- (split.north);
+
+\node[feat, below left=10mm and 15mm of split, text width=39mm] (text) {Text features\\TF--IDF: 30,000 terms\\Word2Vec: 25 dimensions\\deterministic tokenization};
+\node[feat, below=10mm of split, text width=39mm] (hand) {Handcrafted features\\26 signals: length, code-mix, scripts, promotion, emoji, URLs, prices};
+\node[feat, below right=10mm and 15mm of split, text width=39mm] (graph) {Duplicate features\\exact cluster size, duplicate flag, near-duplicate degree, similarity};
+\draw[arr] (split.south west) -- (text.north); \draw[arr] (split.south) -- (hand.north); \draw[arr] (split.south east) -- (graph.north);
+
+\node[model, below=of hand, text width=47mm] (fusion) {Feature fusion\\Linear/NB: 30,026 dimensions\\Tree models: 51 dimensions\\class-weighted training};
+\draw[arr] (text.south east) |- (fusion.north west); \draw[arr] (hand.south) -- (fusion.north); \draw[arr] (graph.south west) |- (fusion.north east);
+\node[model, right=22mm of fusion, text width=43mm] (train) {Gold-only model family\\LR, NB, Linear SVC, RF, GBT, DT, FM\\validation model selection};
+\draw[arr] (fusion.east) -- (train.west);
+
+\node[outputbox, above right=13mm and 9mm of train, text width=47mm] (pseudo) {Pseudo-label branch\\LR generator; $p_{fake}>0.90$, $p_{genuine}>0.75$\\class caps; max pseudo/gold $=5{:}1$\\sample weight $=0.50$};
+\draw[arr, red!70] (train.north) -- (pseudo.south);
+\node[outputbox, below right=13mm and 9mm of train, text width=47mm] (eval) {Locked evaluation and explanation\\Random Forest selected\\metrics, confusion matrices, feature importance, LIME, error analysis};
+\draw[arr] (train.south) -- (eval.north);
+\draw[arr, red!70] (pseudo.south) |- (eval.east);
+\node[box, below=of eval, text width=47mm, fill=gray!15] (concl) {Final result\\Gold-only: macro-F1 0.9194\\Gold + pseudo: macro-F1 0.9098};
+\draw[arr] (eval.south) -- (concl.north);
+\end{tikzpicture}

@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-09-20T18:10:02.475506+00:00",
+  "seed": 42,
+  "source_versions": {
+    "BFRD": "dc5cfbb420f93742d41053d2bd8f1d5ac3360635",
+    "BanglishRev": "38c97cd4255799359b612bafb721e3c442bc0851"
+  },
+  "BFRD": {
+    "raw": {
+      "rows": 9049,
+      "null_text": 0,
+      "blank_text": 0,
+      "columns": [
+        "review",
+        "label"
+      ]
+    },
+    "raw_label_counts": {
+      "1": 7710,
+      "0": 1339
+    },
+    "clean_label_counts": {
+      "1": 7697,
+      "0": 1337
+    },
+    "clean_rows": 9034,
+    "quarantined_conflicting_rows": 0,
+    "near_duplicate_pairs": 365,
+    "duplicate_groups": 8733,
+    "split_label_counts": {
+      "train": {
+        "1": 5387,
+        "0": 935
+      },
+      "validation": {
+        "1": 1155,
+        "0": 201
+      },
+      "test": {
+        "1": 1155,
+        "0": 201
+      }
+    }
+  },
+  "BanglishRev": {
+    "written_reviews_scanned": 1746943,
+    "requested_sample_size": 500000,
+    "sample_rows_before_deduplication": 500000,
+    "clean_rows": 324129,
+    "sample_sha256": "3e97ace1c519831cd1768db36461ba976f8290c55ed11df6996f2d382f4d4cd9",
+    "sampling_method": "deterministic bottom-k SHA-256 sample over all written reviews",
+    "excluded_fields": [
+      "Buyer ID",
+      "Images"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+error_type,rows,mean_chars,mean_tokens,mean_codemix,mean_promo_hits,mean_near_duplicate_degree
+correct,1299,674.71,101.51,0.1442,0.3788,
+false_negative,47,450.43,69.02,0.1327,0.7234,
+false_positive,10,746.3,118.6,0.1773,1.0,

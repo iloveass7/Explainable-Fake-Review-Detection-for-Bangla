@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-09-21T06:01:59.750239+00:00",
+  "selection": {
+    "selected_model": "random_forest",
+    "selected_model_type": "random_forest",
+    "selection_source": "gold validation split",
+    "gold_model_path": "models/random_forest_gold",
+    "expanded_model_path": "models/random_forest_expanded",
+    "primary_metric": "expanded_macro_f1",
+    "tie_break_metric": "expanded_fake_pr_auc"
+  },
+  "test_rows": 1356,
+  "test_class_counts": {
+    "1": 1155,
+    "0": 201
+  },
+  "test_scoring_policy": "Validation-selected gold-only and expanded configurations were each scored once on the locked gold test split.",
+  "gold_only": {
+    "condition": "gold_only",
+    "model": "random_forest",
+    "macro_f1": 0.9193606675114248,
+    "macro_precision": 0.9484117483228199,
+    "macro_recall": 0.8953027072430058,
+    "accuracy": 0.9616519174041298,
+    "fake_pr_auc": 0.9213342213335388,
+    "fake_roc_auc": 0.9642566388835045,
+    "fake_precision": 0.930635838150289,
+    "fake_recall": 0.8009950248756219,
+    "fake_f1": 0.8609625668449198,
+    "genuine_precision": 0.9661876584953508,
+    "genuine_recall": 0.9896103896103896,
+    "genuine_f1": 0.9777587681779298,
+    "confusion_matrix": [
+      [
+        161,
+        40
+      ],
+      [
+        12,
+        1143
+      ]
+    ]
+  },
+  "gold_plus_pseudo": {
+    "condition": "gold_plus_pseudo",
+    "model": "random_forest",
+    "macro_f1": 0.9097746467364342,
+    "macro_precision": 0.94979743002128,
+    "macro_recall": 0.8787555727854235,
+    "accuracy": 0.9579646017699115,
+    "fake_pr_auc": 0.9032780982181965,
+    "fake_roc_auc": 0.9571622407443303,
+    "fake_precision": 0.9390243902439024,
+    "fake_recall": 0.7661691542288557,
+    "fake_f1": 0.8438356164383561,
+    "genuine_precision": 0.9605704697986577,
+    "genuine_recall": 0.9913419913419913,
+    "genuine_f1": 0.9757136770345122,
+    "confusion_matrix": [
+      [
+        154,
+        47
+      ],
+      [
+        10,
+        1145
+      ]
+    ]
+  },
+  "delta_macro_f1": -0.0095860207749906,
+  "delta_fake_pr_auc": -0.018056123115342326,
+  "lime_cases": 110
+}

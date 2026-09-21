@@ -1,0 +1,9 @@
+{
+  "selected_model": "random_forest",
+  "selected_model_type": "random_forest",
+  "selection_source": "gold validation split",
+  "gold_model_path": "models/random_forest_gold",
+  "expanded_model_path": "models/random_forest_expanded",
+  "primary_metric": "expanded_macro_f1",
+  "tie_break_metric": "expanded_fake_pr_auc"
+}

@@ -13,21 +13,35 @@ env/
 spark-warehouse/
 metastore_db/
 derby.log
+*.crc
+_SUCCESS
 
-# Data (large files - download from Hugging Face instead)
-*.parquet
+# Data (large intermediate files - download from Hugging Face instead)
 processed/
 raw/
 
-# Models (large - regenerate from code)
-models/
+# Build artifacts & temporary directories
+tmp/
+pdf_build/
+pdf_pages/
+tectonic_bin/
+*.zip
+*.rar
 
-# Results (regenerate)
-results/
-report/
-audit/
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
 
-# IDE
+# SQLite
+*.db
+
+# IDE & Editor
 .vscode/
 .idea/
 *.swp
@@ -36,12 +50,7 @@ audit/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Logs
-*.log
-
-# Jupyter
-*.ipynb_checkpoints/
-
-# Kaggle
+# Kaggle credentials
 kaggle.json
